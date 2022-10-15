@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import css from './Filter.module.css';
 const Filter = ({ filter }) => {
   return (
-    <input
-      type="text"
-      name="filter"
-      pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-      onChange={filter}
-    />
+    <>
+      <p className={css.title}>Find contacts by name</p>
+      <input
+        className={css.input}
+        type="text"
+        name="filter"
+        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        onChange={filter}
+      />
+    </>
   );
 };
 

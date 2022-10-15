@@ -3,6 +3,7 @@ import shortid from 'shortid';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import css from './App.module.css';
 class App extends Component {
   state = {
     contacts: [
@@ -52,14 +53,16 @@ class App extends Component {
 
     return (
       <>
-        <h1>Phone</h1>
-        <ContactForm addContacts={this.addContacts} />
-        <h2>Contacts</h2>
-        <Filter filter={this.filterChange} />
-        <ContactList
-          filter={filterContact}
-          onDeleteContact={this.deleteontact}
-        />
+        <div className={css.container}>
+          <h1>Phonebook</h1>
+          <ContactForm addContacts={this.addContacts} />
+          <h2>Contacts</h2>
+          <Filter filter={this.filterChange} />
+          <ContactList
+            filter={filterContact}
+            onDeleteContact={this.deleteontact}
+          />
+        </div>
       </>
     );
   }
