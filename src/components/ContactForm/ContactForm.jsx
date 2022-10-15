@@ -42,10 +42,10 @@ class ContactForm extends Component {
             required
             onChange={this.formChange}
           />
+          <button type="submit" className={css.btnSubmit}>
+            Add contact
+          </button>
         </form>
-        <button type="submit" className={css.btnSubmit}>
-          Add contact
-        </button>
       </div>
     );
   }
